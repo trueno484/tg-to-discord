@@ -14,10 +14,11 @@ SOURCE_CHAT_ID = os.getenv("TG_SOURCE_CHAT_ID")  # set after we detect it
 # 3) "200%"
 # 4) "bonus" any case
 BLOCK_REGEXES = [
-    r"(?i)(?<!\w)\sATM(?!\w)",          # space before ATM, ATM as its own token
+    r"(?i)atm",          # space before ATM, ATM as its own token
     r"(?i)accurate\s+signals",          # phrase, any case
     r"200%",                            # literal
     r"(?i)\bbonus\b",                   # bonus as a word, any case
+    r"(?i)\bperformance\b",
 ]
 
 compiled = [re.compile(p) for p in BLOCK_REGEXES]
