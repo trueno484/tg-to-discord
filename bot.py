@@ -34,7 +34,7 @@ def should_block(text: str) -> bool:
             return True
     return False
 
-async def async def post_to_discord(content: str) -> None:
+async def post_to_discord(content: str) -> None:
     if not DISCORD_WEBHOOK:
         return
 
