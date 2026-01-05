@@ -38,7 +38,7 @@ async def post_to_discord(content: str) -> None:
     if not DISCORD_WEBHOOK:
         return
 
-    # Add @everyone ONLY if TP1 appears in the message (case-insensitive)
+    # Add @everyone ONLY if TP1 appears (case-insensitive)
     if re.search(r"(?i)\btp1\b", content):
         message = f"{content}\n\n@everyone"
     else:
@@ -46,12 +46,6 @@ async def post_to_discord(content: str) -> None:
 
     payload = {"content": message[:1900]}
 
-    async with aiohttp.ClientSession() as session:
-        async with session.post(DISCORD_WEBHOOK, json=payload) as resp:
-            await resp.text()post_to_discord(content: str) -> None:
-    if not DISCORD_WEBHOOK:
-        return
-    payload = {"content": content[:1900]}
     async with aiohttp.ClientSession() as session:
         async with session.post(DISCORD_WEBHOOK, json=payload) as resp:
             await resp.text()
