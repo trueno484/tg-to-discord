@@ -15,7 +15,7 @@ SOURCE_CHAT_ID = os.getenv("TG_SOURCE_CHAT_ID")  # set after we detect it
 # 4) "bonus" any case
 BLOCK_REGEXES = [
     r"(?i)atm",          # space before ATM, ATM as its own token
-    r"(?i)accurate\s+signals",          # phrase, any case
+    r"(?i)accurate",          # phrase, any case
     r"200%",                            # literal
     r"(?i)\bbonus\b",                   # bonus as a word, any case
     r"(?i)\bperformance\b",
