@@ -19,6 +19,9 @@ BLOCK_REGEXES = [
     r"200%",                            # literal
     r"(?i)\bbonus\b",                   # bonus as a word, any case
     r"(?i)\bperformance\b",
+    r"(?i)\bnas100\b",                  # NAS100
+    r"(?i)\bbtcusd\b",                  # BTCUSD
+    r"(?i)\bus30\b",                    # US30
 ]
 
 compiled = [re.compile(p) for p in BLOCK_REGEXES]
