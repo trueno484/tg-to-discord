@@ -22,6 +22,7 @@ BLOCK_REGEXES = [
     r"(?i)\bnas100\b",                  # NAS100
     r"(?i)\bbtcusd\b",                  # BTCUSD
     r"(?i)\bus30\b",                    # US30
+    r"(?i)nas"
 ]
 
 compiled = [re.compile(p) for p in BLOCK_REGEXES]
